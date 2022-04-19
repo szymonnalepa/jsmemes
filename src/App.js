@@ -19,21 +19,27 @@ function App() {
 		<div className="App">
 			<Grid container sx={{ minHeight: "100vh" }}>
 				<Grid item xs={2} sx={{ backgroundColor: "#EFEFEF" }}>
-					<Link to="/hot">
-						<Button variant="contained">Hot</Button>
+					<Link to="/hot" style={{ textDecoration: "none" }}>
+						<Button variant="contained" style={{ margin: "8px 0" }}>
+							Hot
+						</Button>
 					</Link>
 					<br />
-					<Link to="/regular">Regular</Link>
+					<Link style={{ textDecoration: "none" }} to="/regular">
+						<Button variant="contained" style={{ margin: "8px 0" }}>
+							Regular
+						</Button>
+					</Link>
 				</Grid>
 				<Grid item xs={10} container>
-					<Grid item xs={4}></Grid>
-					<Grid item xs={4}>
+					<Grid item xs={0} md={3} lg={4}></Grid>
+					<Grid item xs={12} md={6} lg={4}>
 						<Routes>
 							<Route path="/regular" element={<RegularMemes memesArrayProps={memes} />} />
 							<Route path="/hot" element={<HotMemes memesArrayProps={memes} />} />
 						</Routes>
 					</Grid>
-					<Grid item xs={4}></Grid>
+					<Grid item xs={0} md={3} lg={4}></Grid>
 				</Grid>
 			</Grid>
 		</div>
