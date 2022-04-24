@@ -18,20 +18,20 @@ function App() {
 	return (
 		<div className="App">
 			<Grid container sx={{ minHeight: "100vh" }}>
-				<Grid item xs={2} sx={{ backgroundColor: "#EFEFEF" }}>
+				<Grid item xs={2} sx={{ background:"linear-gradient(to right, #eaeaea, #ada996);", padding:"24px 0" }}>
 					<Link to="/hot" style={{ textDecoration: "none" }}>
-						<Button variant="contained" style={{ margin: "8px 0" }}>
+						<Button variant="contained" color="error">
 							Hot
 						</Button>
 					</Link>
 					<br />
 					<Link style={{ textDecoration: "none" }} to="/regular">
-						<Button variant="contained" style={{ margin: "8px 0" }}>
+						<Button variant="contained" style={{ margin: "24px 0 0 0" }}>
 							Regular
 						</Button>
 					</Link>
 				</Grid>
-				<Grid item xs={10} container>
+				<Grid item xs={10} container sx={{background:"linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea)"}}>
 					<Grid item xs={0} md={3} lg={4}></Grid>
 					<Grid item xs={12} md={6} lg={4}>
 						<Routes>
