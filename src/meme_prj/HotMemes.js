@@ -1,11 +1,16 @@
-import { MemeList } from "./MemeList";
 import { Typography } from "@mui/material";
+import { Meme } from "./Meme";
 
 export function HotMemes(props) {
 	return (
 		<div>
 			<Typography variant="h4" gutterBottom component="div">Hot memes</Typography>
-			<MemeList memesArrayProps={props.memesArrayProps.filter((item) => item.upvotes - item.downvotes > 5)}></MemeList>
+			{props.memes
+				.filter((item) => item.upvotes - item.downvotes > 5)
+				.map((item) => (
+					<Meme {...item} upvote={props.upvote} downvote={props.downvote}/>
+				))
+			}
 		</div>
 	);
 }

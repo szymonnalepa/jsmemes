@@ -5,16 +5,26 @@ import { Button, Grid } from "@mui/material";
 import { memesArray } from "./meme_prj/memesArray.js";
 import { HotMemes } from "./meme_prj/HotMemes";
 import { RegularMemes } from "./meme_prj/RegularMemes";
-import { useEffect } from "react";
-import { setMemes } from "./store";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 function App() {
-	const dispatch = useDispatch();
+	const [memes, setMemes] = useState([]);
+	const upvote = (memeTitle) => {
+		setMemes(memes => memes.map((meme) => ({
+			...meme,
+			upvotes: meme.title === memeTitle ? meme.upvotes + 1 : meme.upvotes
+		})));
+	}
+    const downvote = (memeTitle) => {
+        setMemes(memes => memes.map((meme) => ({
+            ...meme,
+            downvotes: meme.title === memeTitle ? meme.downvotes + 1 : meme.downvotes
+        })));
+    }
+
 	useEffect(() => {
-		dispatch(setMemes(memesArray));
+		setMemes(memesArray);
 	}, []);
-	const memes = useSelector((state) => state.memes);
 	return (
 		<div className="App">
 			<Grid container sx={{ minHeight: "100vh" }}>
@@ -32,14 +42,24 @@ function App() {
 					</Link>
 				</Grid>
 				<Grid item xs={10} container sx={{background:"linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea)"}}>
-					<Grid item xs={0} md={3} lg={4}></Grid>
+					<Grid item xs={0} md={3} lg={4}/>
 					<Grid item xs={12} md={6} lg={4}>
 						<Routes>
-							<Route path="/regular" element={<RegularMemes memesArrayProps={memes} />} />
-							<Route path="/hot" element={<HotMemes memesArrayProps={memes} />} />
+                            <Route path="/regular"
+                                   element={<RegularMemes memes={memes}
+                                                          upvote={upvote}
+                                                          downvote={downvote}
+                                   />}
+                            />
+                            <Route path="/hot"
+                                   element={<HotMemes memes={memes}
+                                                      upvote={upvote}
+                                                      downvote={downvote}
+                                   />}
+                            />
 						</Routes>
 					</Grid>
-					<Grid item xs={0} md={3} lg={4}></Grid>
+					<Grid item xs={0} md={3} lg={4}/>
 				</Grid>
 			</Grid>
 		</div>
