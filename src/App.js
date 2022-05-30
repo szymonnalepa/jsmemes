@@ -40,7 +40,6 @@ function App() {
                             <Route path="/regular"
                                    element={<Memes memes={regularMemes}
 												   title="Regular memes"
-
                                    />}
                             />
                             <Route path="/hot"
