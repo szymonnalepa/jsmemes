@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/szymonnalepa/jsmemes/static/css/main.df42ee7c.css",
+    "main.js": "/szymonnalepa/jsmemes/static/js/main.5d138a1a.js",
+    "index.html": "/szymonnalepa/jsmemes/index.html",
+    "main.df42ee7c.css.map": "/szymonnalepa/jsmemes/static/css/main.df42ee7c.css.map",
+    "main.5d138a1a.js.map": "/szymonnalepa/jsmemes/static/js/main.5d138a1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df42ee7c.css",
+    "static/js/main.5d138a1a.js"
+  ]
+}
