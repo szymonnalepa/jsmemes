@@ -1,7 +1,7 @@
 {
   "name": "Memes",
   "version": "0.1.0",
-  "homepage": "https://github.com/szymonnalepa/jsmemes",
+  "homepage": "https://szymonnalepa.github.io/jsmemes",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
