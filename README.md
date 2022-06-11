@@ -13,7 +13,7 @@ First, make sure that you've installed: Node.js and GIT Bash.
 If you would like to install this application, you need to follow these steps:
 
 Run the following command in you terminal/command prompt:
-git clone https://github.com/szymonnalepa/jsmemes
+`git clone https://github.com/szymonnalepa/jsmemes`
 
 Run the following command in the project directory:
 `npm i`
