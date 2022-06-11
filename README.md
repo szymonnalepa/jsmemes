@@ -2,7 +2,7 @@
 
 This project was bootstrapped with Create React App.
 
-This is a simple React application which uses Material Design (MUI), Redux, React-Router and it is formatted with Prettier.
+This is a simple React application which uses Material Design (MUI), Redux, React-Router, gh-pages and it is formatted with Prettier.
 
 Using this application you can display a premade list of memes, give upvotes and downvotes for each of them and display a list of memes with a difference of 5 or more upvoted then downvotes (Hot memes) or display the memes which do not meet these requirements (Regular memes)
 
