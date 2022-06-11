@@ -16,7 +16,7 @@ Run the following command in you terminal/command prompt:
 git clone https://github.com/szymonnalepa/jsmemes
 
 Run the following command in the project directory:
-`npm -i`
+`npm i`
 
 Then, run the application with the following command:
 `npm start`
