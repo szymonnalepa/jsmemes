@@ -28,7 +28,7 @@ function App() {
         >
           <Link
             to="/hot"
-            style={{ textDecoration: "none", position: "fixed", left: 30 }}
+            style={{ textDecoration: "none", position: "fixed", left: 10 }}
           >
             <Button variant="contained" color="error">
               Hot
@@ -36,7 +36,7 @@ function App() {
           </Link>
           <br />
           <Link
-            style={{ textDecoration: "none", position: "fixed", left: 30 }}
+            style={{ textDecoration: "none", position: "fixed", left: 10 }}
             to="/regular"
           >
             <Button variant="contained" style={{ margin: "24px 0 0 0" }}>
