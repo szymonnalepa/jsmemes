@@ -26,4 +26,4 @@ The page will reload when you make changes.
 
 ### Screenshot form the app (desktop platform):
 
-![Screenshot](/assets/screenHotMemes.png)
+![Screenshot](./public/assets/screenHotMemes.png)
