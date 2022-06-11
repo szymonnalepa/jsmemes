@@ -2,9 +2,9 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { Button, Grid } from "@mui/material";
-import { memesArray } from "./meme_prj/memesArray.js";
-import { HotMemes } from "./meme_prj/HotMemes";
-import { RegularMemes } from "./meme_prj/RegularMemes";
+import { memesArray } from "./memeProject/memesArray.js.js";
+import { HotMemes } from "./memeProject/HotMemes";
+import { RegularMemes } from "./memeProject/RegularMemes";
 import { useEffect } from "react";
 import { setMemes } from "./store";
 import { useDispatch, useSelector } from "react-redux";
